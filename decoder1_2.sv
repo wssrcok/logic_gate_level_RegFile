@@ -4,8 +4,8 @@ module decoder1_2 (in, out1, out2, sel);
 
     logic w;
     
-    not (w, sel);
-    and a1 (out1, in, w);
-    and a2 (out2, in, sel);
+    not #50 n (w, sel);
+    and #50 a1 (out1, in, w);
+    and #50 a2 (out2, in, sel);
 
 endmodule
