@@ -6,8 +6,8 @@ module register64(dataOut, dataIn, we, clk);
     genvar i;
     generate
         for (i = 63; i >= 0; i--) begin : eachDff 
-            D_FF dff64 (muxToReg[i], dataIn[i], 0, clk);
+            D_FF dff (dataOut[i], dataIn[i], 0, clk);
         end
     endgenerate
-    mux2_1_64bit m64 (dataIn, muxToReg, we, dataOut);
+    mux2_1_64bit m64 (dataIn, dataOut, we, muxToReg);
 endmodule

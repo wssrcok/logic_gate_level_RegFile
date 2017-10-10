@@ -1,7 +1,7 @@
 module mux4_1 (sel, dataIn, dataOut);
 	input logic [1:0]sel;
     input logic [3:0]dataIn;
-	output logic dataOut;
+	output logic out;
     logic [1:0] tempOut;
     logic w1, w2;
 

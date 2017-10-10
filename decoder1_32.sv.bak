@@ -5,6 +5,6 @@ module decoder1_32 (regWrite, writeRegister, we);
 
     logic wire1, wire2;
     decoder1_16 d1 (wire1, writeRegister[3:0], we[31:16]);
-    decoder1_16 d2 (wire2, writeRegister[3:0], we[15:0]);
+    decoder1_16 d1 (wire2, writeRegister[3:0], we[15:0]);
     decoder1_2 d (regWrite, wire1, wire2, writeRegister[4]);
 endmodule
